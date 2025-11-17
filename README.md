@@ -65,7 +65,7 @@ To add app screenshots to the landing page:
 ## 🎨 Adding the App Icon
 
 1. Export your app icon (1024x1024px)
-2. Save as `docs/assets/app-icon.png`
+2. Save as `docs/assets/app-icon.jpg`
 3. Update `index.html`:
 
 ```html
@@ -76,7 +76,7 @@ To add app screenshots to the landing page:
 
 <!-- Replace with -->
 <div class="app-icon">
-    <img src="assets/app-icon.png" alt="EditPro App Icon">
+    <img src="assets/app-icon.jpg" alt="EditPro App Icon">
 </div>
 ```
 

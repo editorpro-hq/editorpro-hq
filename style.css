@@ -112,31 +112,46 @@ body::before {
     padding: 0 20px;
 }
 
-/* Header with glass effect */
+/* Header with glass effect - full width */
 header {
-    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(5, 2, 18, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    z-index: 100;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+header .container {
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    position: sticky;
-    top: 0;
-    background: rgba(10, 4, 32, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-glow);
-    z-index: 100;
-    transition: all 0.3s ease;
 }
 
 header.scrolled {
-    background: rgba(10, 4, 32, 0.95);
+    background: rgba(5, 2, 18, 0.95);
+    border-bottom: 1px solid var(--border-glow);
     box-shadow: 0 4px 30px rgba(139, 92, 246, 0.2);
 }
 
 .logo a {
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 .logo h1 {
@@ -218,10 +233,45 @@ header nav a.active {
     line-height: 1.1;
     margin-bottom: 20px;
     background: linear-gradient(135deg, #ffffff 0%, var(--purple-light) 100%);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: fadeInUp 0.8s ease 0.2s both;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-title-main::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 35%,
+        rgba(168, 85, 247, 0.5) 45%,
+        rgba(168, 85, 247, 1) 50%,
+        rgba(168, 85, 247, 0.5) 55%,
+        transparent 65%,
+        transparent 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .hero-title-sub {
@@ -272,7 +322,7 @@ header nav a.active {
                 0 0 100px rgba(139, 92, 246, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 .app-icon img:hover {
