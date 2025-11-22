@@ -1,17 +1,17 @@
-# EditPro GitHub Pages Website
+# EditorPro GitHub Pages Website
 
-This folder contains the GitHub Pages website for EditPro, including the landing page and privacy policy.
+This folder contains the GitHub Pages website for EditorPro, including the landing page and privacy policy.
 
 ## 🌐 Live URL
 
 Once GitHub Pages is enabled, your site will be available at:
 ```
-https://[your-github-username].github.io/EditPro/
+https://[your-github-username].github.io/EditorPro/
 ```
 
 Privacy Policy URL for App Store:
 ```
-https://[your-github-username].github.io/EditPro/privacy.html
+https://[your-github-username].github.io/EditorPro/privacy.html
 ```
 
 ## 📁 Folder Structure
@@ -29,7 +29,7 @@ docs/
 
 ## 🚀 How to Enable GitHub Pages
 
-1. Go to your EditPro repository on GitHub
+1. Go to your EditorPro repository on GitHub
 2. Click **Settings** tab
 3. Scroll to **Pages** section in the left sidebar
 4. Under "Build and deployment":
@@ -71,12 +71,12 @@ To add app screenshots to the landing page:
 ```html
 <!-- Find this section in index.html -->
 <div class="app-icon-placeholder">
-    <span class="icon-text">EditPro</span>
+    <span class="icon-text">EditorPro</span>
 </div>
 
 <!-- Replace with -->
 <div class="app-icon">
-    <img src="assets/app-icon.jpg" alt="EditPro App Icon">
+    <img src="assets/app-icon.jpg" alt="EditorPro App Icon">
 </div>
 ```
 
@@ -119,17 +119,17 @@ When submitting to App Store Connect:
 
 1. **Privacy Policy URL**:
    ```
-   https://[your-username].github.io/EditPro/privacy.html
+   https://[your-username].github.io/EditorPro/privacy.html
    ```
 
 2. **Marketing URL** (optional):
    ```
-   https://[your-username].github.io/EditPro/
+   https://[your-username].github.io/EditorPro/
    ```
 
 3. **Support URL**:
    ```
-   https://[your-username].github.io/EditPro/
+   https://[your-username].github.io/EditorPro/
    ```
    Or use: `mailto:dsoulkeeper@gmail.com`
 
@@ -154,7 +154,7 @@ To use a custom domain (e.g., `editpro.app`):
 ## 📝 File Descriptions
 
 ### index.html
-- Landing page for EditPro
+- Landing page for EditorPro
 - Showcases features, screenshots
 - Links to App Store (when ready)
 - Privacy-focused messaging
@@ -162,7 +162,7 @@ To use a custom domain (e.g., `editpro.app`):
 ### privacy.html
 - Complete privacy policy
 - Apple-compliant language
-- EditPro-specific (no tracking, local processing)
+- EditorPro-specific (no tracking, local processing)
 - Required for App Store submission
 
 ### style.css
