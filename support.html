@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EditorPro Support - Get help with EditorPro video editing app for iOS.">
+    <title>Support - EditorPro</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <header id="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/app-icon.jpg" alt="EditorPro Logo" class="logo-icon">
+                    <h1>EditorPro</h1>
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="support.html" class="active">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="privacy-content">
+            <h1>Support</h1>
+            <p class="last-updated">We're here to help</p>
+
+            <section>
+                <h2>Contact Us</h2>
+                <p>Have questions, feedback, or need help with EditorPro? We'd love to hear from you.</p>
+
+                <div style="text-align: center; margin: 60px 0;">
+                    <a href="mailto:yogi.badke@gmail.com" class="btn btn-primary">
+                        Email Support
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:yogi.badke@gmail.com">yogi.badke@gmail.com</a></p>
+                    <p style="margin-top: 16px; color: var(--text-muted);">We typically respond within 24-48 hours.</p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EditorPro</h3>
+                    <p>Privacy focused 100% offline editing for iOS</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <nav>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="support.html">Support</a>
+                    </nav>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:yogi.badke@gmail.com">yogi.badke@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 EditorPro. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script>
+        // Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
